@@ -20,11 +20,3 @@ resource "aws_dynamodb_table" "reversed_ips" {
     Name = var.table_name
   }
 }
-
-output "dynamodb_table_name" {
-  value = aws_dynamodb_table.reversed_ips.name
-}
-
-output "dynamodb_table_arn" {
-  value = aws_dynamodb_table.reversed_ips.arn
-}
