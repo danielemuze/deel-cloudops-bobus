@@ -33,4 +33,10 @@ resource "aws_autoscaling_group" "web" {
 
   # Attach the Auto Scaling group to the ELB
   depends_on = [aws_lb.web]
+
+  
+  # to give time for the ec2 instance status check to be = checks passed before accepting traffic
+  provisioner "local-exec" {
+    command = "sleep 120"
+  }
 }

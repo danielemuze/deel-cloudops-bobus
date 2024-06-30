@@ -10,7 +10,6 @@ sudo apt update -y
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl enable docker && sudo systemctl enable containerd
 sudo usermod -aG docker ${USER}
-sleep 60
 sudo docker run -d \
   -e DYNAMODB_TABLE="reversed_ips" \
   -e AWS_REGION="us-east-1" \
