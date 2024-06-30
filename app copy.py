@@ -42,7 +42,7 @@ def store_ip(ip):
 @app.route('/')
 def reverse_ip():
     """Reverse the client's IP address and store it."""
-    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0].strip()
+    client_ip = request.remote_addr
     reversed_ip = ".".join(client_ip.split(".")[::-1])
     store_ip(reversed_ip)
     return reversed_ip
