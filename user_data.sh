@@ -15,4 +15,4 @@ sudo docker run -d \
   -e AWS_REGION="us-east-1" \
   -e PORT=5000 \
   -p 5000:5000 \
-  danielemuze/deel-app:lat
+  danielemuze/deel-app:latest
